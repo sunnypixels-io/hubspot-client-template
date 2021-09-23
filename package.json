@@ -1,0 +1,32 @@
+{
+  "name": "om-hubspot-client-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetch": "npx hs fetch --account=1234567890 --overwrite / source/hubspot",
+    "push": "npx hs upload --account=1234567890 source/hubspot /",
+    "watch": "npx hs watch --account=1234567890 source/hubspot /"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orange-marketing/om-hubspot-client-template.git"
+  },
+  "author": {
+    "name": "Alex Zappa",
+    "email": "alex@sunnypixels.io",
+    "url": "https://sunnypixels.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orange-marketing/om-hubspot-client-template/issues"
+  },
+  "homepage": "https://github.com/orange-marketing/om-hubspot-client-template#readme",
+  "devDependencies": {
+    "@hubspot/cli": "^3.0.5"
+  },
+  "engines": {
+    "node": "^12 || >=14"
+  }
+}
