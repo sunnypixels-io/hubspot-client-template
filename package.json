@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch": "npx hs fetch --account=1234567890 --overwrite / dist/hubspot",
-    "push": "npx hs upload --account=1234567890 dist/hubspot /",
-    "watch": "npx hs watch --account=1234567890 dist/hubspot /"
+    "fetch": "npx hs fetch --account=1234567890 --overwrite / ./hubspot",
+    "push": "npx hs upload --account=1234567890 ./hubspot /",
+    "watch": "npx hs watch --account=1234567890 ./hubspot /"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/sunnypixels-io/hubspot-client-template#readme",
   "devDependencies": {
-    "@hubspot/cli": "^3.0.12"
+    "@hubspot/cli": "^4.1.3"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   }
 }
