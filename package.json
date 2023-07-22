@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch": "npx hs fetch --account=1234567890 --overwrite / ./hubspot",
-    "push": "npx hs upload --account=1234567890 ./hubspot /",
-    "watch": "npx hs watch --account=1234567890 ./hubspot /"
+    "fetch:hubspot": "npx hs fetch --overwrite / ./hubspot",
+    "push:hubspot": "npx hs upload ./hubspot /",
+    "watch:hubspot": "npx hs watch ./hubspot /",
+    "watch:tailwind": "npx tailwindcss --postcss -i ./source/css/tailwind.css -o ./hubspot/ThemeName/css/compiled/tailwind.css --watch",
+    "build:tailwind": "npx tailwindcss --postcss -i ./source/css/tailwind.css -o ./hubspot/ThemeName/css/compiled/tailwind.css",
+    "start": "npm-run-all --parallel watch:*"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,16 @@
   },
   "homepage": "https://github.com/sunnypixels-io/hubspot-client-template#readme",
   "devDependencies": {
-    "@hubspot/cli": "^4.1.3"
+    "@hubspot/cli": "^4.2.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "autoprefixer": "^10.4.14",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-easy-import": "^4.0.0",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-safe-area": "^0.3.0"
   },
   "engines": {
     "node": ">=18"

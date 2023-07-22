@@ -18,3 +18,4 @@ release/*
 release_zip/*
 svn/*
 hubspot.config.yml
+package-lock.json
